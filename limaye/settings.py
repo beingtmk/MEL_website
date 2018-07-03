@@ -146,6 +146,7 @@ INSTALLED_APPS = [
     # other apps
     "pinax.blog",
     "pinax.images",
+    "booking",
 ]
 
 ADMIN_URL = "admin:index"

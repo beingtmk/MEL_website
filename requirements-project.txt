@@ -1,2 +1,4 @@
 pinax-theme-bootstrap
+pinax-blog
+django-booking
 
