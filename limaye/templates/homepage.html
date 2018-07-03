@@ -1,0 +1,129 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}pinax-project-account{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<main>
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            <h1>{% blocktrans %}<div style="font-size: 6rem; font-weight: 600;">Molecular Endocrinology Lab</div>{% endblocktrans %}</h1>
+            <p class="lead">
+                {% blocktrans %}
+                This site provides latest information on our research, publications and lab members.
+                <br><br>
+                It also provides links to Databases and Tools particularly those which are frequently accessed by our Research group.
+                <br>
+                Also, watch out for interesting Scientific Developments in our field of Research and links to relevant research articles.
+                <br><br>
+                {% endblocktrans %}
+            </p>
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            <p class="mb-5 lead">{% blocktrans %}Members can <a href="{{ login_url }}" class="btn btn-secondary">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
+            {% endif %}
+        </div>
+    </section>
+    <!-- Header with Background Image -->
+    <!-- <header class="business-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4">Business Name or Tagline</h1>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="mt-4">What We Do</h2>
+          <p>
+            The Subject of scientific enquiry in our laboratory stands at the crossroad where multiple disciplines meet - molecular endorinology, cancer biology and reproductive biology. The focus is on understanding the mechanism underlying the development and progression of endocrine cancers. We also study hormonal regulation of genes. We use molecular biology tools with cell culture and animal models for our investigations.
+          </p>
+
+          <p>
+            The idea is to try and answer small questions that interrogate the "parts" in order to understand the "whole".
+          </p>
+          <h4>
+            Work with us?  <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+          </h4>
+
+        </div>
+        <div class="col-sm-4">
+          <h2 class="mt-4">Contact Us</h2>
+          <address>
+            <strong>Anil Mukund Limaye</strong>
+            <br>Associate Professor
+            <br>Department of Biosciences and Bioengeneering
+            <br>
+          </address>
+          <address>
+            <abbr title="Phone">P:</abbr>
+            (+91) 361-2582218
+            <br>
+            <abbr title="Email">E:</abbr>
+            <a href="mailto:#">amul@iitg.ac.in</a>
+            <br>
+            <a href="#" class="btn btn-secondary btn-lg">Make an Appointement</a>
+          </address>
+        </div>
+      </div>
+      <hr>
+      <!-- /.row -->
+      <h2>Here are some Articles on our Research</h2>
+      <div class="row">
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    </section>
+</main>
+{% endblock %}
