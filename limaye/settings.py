@@ -16,7 +16,8 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    "beingtmk.pythonanywhere.com",
 ]
 
 # Local time zone for this installation. Choices can be found here:
