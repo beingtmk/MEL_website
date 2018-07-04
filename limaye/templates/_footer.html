@@ -2,12 +2,17 @@
 
 {% now "Y" as current_year %}
 
-{% blocktrans %}
 <!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">&copy; {{ current_year }} &lt;Molecular Endocrinology Lab&gt;</p>
-  </div>
-  <!-- /.container -->
-</footer>
+
+{% blocktrans %}
+<div class="copyright">&copy; {{ current_year }} &lt;your company here&gt;</div>
 {% endblocktrans %}
+
+<div class="made-with-pinax">
+    Made with Django
+    <div class="patches">
+        {% for app in pinax_apps %}
+            <img src="http://pinax.github.com/pinax-design/patches/{{ app }}.svg" />
+        {% endfor %}
+    </div>
+</div>
