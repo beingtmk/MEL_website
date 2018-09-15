@@ -20,7 +20,11 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     # path("gallery/", views.ObjectCreateView, name="about")
     # path('booking/', include('booking.urls', namespace="booking")),
-    url(r'^booking/', include('booking.urls'))
+    url(r'^booking/', include('booking.urls')),
+
+    #Publications
+    path('publications/list', views.PublicationListView.as_view(), name='publications-list'),
+    path('publications/create', views.PublicationCreateView.as_view(), name='publications-create'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

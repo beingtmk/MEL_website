@@ -147,7 +147,7 @@ INSTALLED_APPS = [
     # other apps
     "pinax.blog",
     "pinax.images",
-    "booking",
+    "django_forms_bootstrap"
 ]
 
 ADMIN_URL = "admin:index"

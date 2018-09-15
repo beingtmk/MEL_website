@@ -1,3 +1,4 @@
 -r requirements-zero.txt
 -r requirements-account.txt
 -r requirements-project.txt
+django-forms-bootstrap

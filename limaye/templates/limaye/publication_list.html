@@ -1,0 +1,21 @@
+{% extends "site_base.html" %}
+{% block body_base %}
+<div class="jumbotron container">
+  <h1>Publications</h1>
+  <hr>
+  <ol>
+    {% for publication in object_list %}
+        <li>
+          {{ publication.title }}
+            <ul>
+              {% for author in publication.authors.all %}
+                <li> {{author.name}} </li>
+              {% endfor %}
+            </ul>
+        </li>
+    {% empty %}
+        <li>No publications yet.</li>
+    {% endfor %}
+  </ol>
+</div>
+{% endblock %}

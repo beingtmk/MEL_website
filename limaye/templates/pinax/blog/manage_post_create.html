@@ -1,7 +1,7 @@
 {% extends "pinax/blog/blog_base.html" %}
 
 {% load bootstrap %}
-
+{% load bootstrap_tags %}
 {% block content %}
     {% if scoper_lookup %}
         {% url "pinax_blog:ajax_preview" scoper_lookup as preview_url %}
@@ -25,7 +25,7 @@
                 <div class="tab-pane" id="teaser-preview"></div>
             </div>
         </div>
-        {{ form.content|bootstrap }}
+        {{ form.content|as_bootstrap }}
         {{ form.description|bootstrap }}
         {{ form.state|bootstrap }}
         {% if post.image_set %}
